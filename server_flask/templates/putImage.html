@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<body>
+    <form class="text=center" action="http://localhost:5000/" method="post" enctype="multipart/form-data">
+        <label for="question">질문: </label><input type="text" name="question" id="question"><br>
+        <label for="imageFile">사진 업로드: </label><input type="file" name="imageFile" id="imageFile"><br>
+        <button type="submit">전송</button>
+    </form>
+    {% if prediction %}
+        <p class="text-center"> Image is a {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

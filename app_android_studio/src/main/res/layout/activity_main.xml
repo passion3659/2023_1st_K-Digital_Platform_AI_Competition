@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/getTextAndSpeechView"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/dog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/recordView"
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/questionEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/textview_background"
+        android:drawableStart="@drawable/baseline_question_mark_24"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="질문을 말씀해주세요"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/answerTextView"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/textview_background"
+        android:drawableStart="@drawable/baseline_mic_24"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="답변을 말씀드릴게요"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionEditText" />
+
+    <TextView
+        android:id="@+id/getAnswerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="아래 버튼을 눌러 답변 불러오기"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/getTextAndSpeechView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/recordView"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/mic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
+
+    <View
+        android:id="@+id/imageDivider"
+        android:layout_width="2dp"
+        android:layout_height="200dp"
+        android:background="@color/main"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:drawableStart="@drawable/baseline_check_24"
+        android:text="상태 체크"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getTextAndSpeechView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

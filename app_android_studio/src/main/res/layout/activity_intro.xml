@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/StartAppBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/StartAppBtn"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        android:text="시작하기"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/textToSpeechBtn"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        android:text="듣기"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartAppBtn" />
+    <EditText
+        android:id="@+id/responsetext"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:hint="질문을 말씀해보세요"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textToSpeechBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
